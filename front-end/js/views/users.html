@@ -1,0 +1,12 @@
+<ul class="media-list">
+  <li class="media" ng-repeat="user in users.all">
+    <div class="media-left">
+      <a href="#" ui-sref="profile">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{ user.local.username }}</h4>
+      <p>{{ user.local.moments }}</p>
+    </div>
+  </li>
+</ul>

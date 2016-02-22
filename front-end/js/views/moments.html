@@ -1,0 +1,13 @@
+<h1>Moments</h1>
+
+<ul>
+  <li ng-repeat="moment in moments.user_id.all">
+    <div>
+      <h4>{{ moment.emotion }}</h4>
+      <p>{{ moment.description }}</p>
+              <button class='delete' ng-click="moments.deleteMoment(moment)">Delete</button>
+
+    </div>
+  </li>
+</ul>
+

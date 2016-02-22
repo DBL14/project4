@@ -1,0 +1,18 @@
+
+
+nav{
+	background-color: #28AADC;
+	padding: 20px;
+}
+
+a{
+	color: #104E8B;
+	margin: 20px;
+	text-decoration: none;
+
+}
+
+a:hover{
+	color: white;
+	
+}
