@@ -2,19 +2,24 @@ var Moment = require("../models/moment");
 var User = require("../models/user");
 
 function momentsIndex(req, res){
-  Moment.find({}, function(err, moments) {
+  Moment.find().populate("user").exec(function(err, moments) {
+    // console.log(moments)
     if (err) return res.status(404).send(err);
     res.status(200).send(moments);
   });
 }
 
 function momentsCreate(req, res){
-  var moment = new Moment(req.body.moment);
 
-  moment.save(function(err){
+  console.log(req.body)
+  var moment = new Moment(req.body.moment);
+  
+  moment.save(function(err, moment){
+    console.log(moment)
     if (err) return res.status(500).send(err);
-    var id = req.body.moment.user_id;
+    var id = req.body.moment.user;
     User.findById(id, function(err, user){
+      // console.log(user)
        user.moments.push(moment);
        user.save();
        return res.status(201).send(moment);

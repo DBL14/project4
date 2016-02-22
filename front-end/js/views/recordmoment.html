@@ -6,13 +6,38 @@
   <form id="record-moment" ng-submit="moments.add()" novalidate>
 
     <div class="form-group">
-      <label for="title">Emotion</label>
-      <input type="text" class="form-control" id="emotion"  placeholder="emotion" ng-model="moments.moment.emotion">
+            
+            <label>happy</label>
+            <br>
+            <input type="radio" ng-model="moments.moment.emotion" value="happy">
+            <br>
+            <label>sad</label>
+            <br>
+            <input type="radio" ng-model="moments.moment.emotion" value="sad">
+            <br>
+            <label>angry</label>
+            <br>
+            <input type="radio" ng-model="moments.moment.emotion" value="angry">
+            <br>
+            <label>scared</label>
+            <br>
+            <input type="radio" ng-model="moments.moment.emotion" value="scared">
+            <br>
+            <label>disgusted</label>
+            <br>
+            <input type="radio" ng-model="moments.moment.emotion" value="disgusted">
+            <br>
+            <label>surprised</label>
+            <br>
+            <input type="radio" ng-model="moments.moment.emotion" value="surprised">
     </div>
+      
+          
+
 
     <div class="form-group">
-      <label for="description">Details</label>
-      <textarea class="form-control" id="details" name="details" ng-model="moments.moment.description" placeholder="Details"></textarea>
+          <label for="description">Details</label>
+          <textarea class="form-control" id="details" name="details" ng-model="moments.moment.description"></textarea>
     </div>
 
    <!--  <div class="form-group">
@@ -20,12 +45,11 @@
       <input type="text" class="form-control" id="location" name="location" placeholder="location" ng-model="moments.moment.location">
     </div> -->
 
+    
+<img ng-src="{{moments.mapsrc}}" width="300" height="300"/>
 
     <button type="submit">Submit</button>
   </form>
-
-<img ng-src="{{moments.mapsrc}}" width="300" height="300"/>
-
 
 </section>
 

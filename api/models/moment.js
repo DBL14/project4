@@ -5,7 +5,7 @@ var momentSchema = mongoose.Schema({
   description: { type: String},
   longitude : { type: Number},
   latitude : { type: Number},
-   user : {type: mongoose.Schema.ObjectId, ref: 'User'}
+  user : {type: mongoose.Schema.ObjectId, ref: 'User'}
 });
 
 module.exports = mongoose.model('Moment', momentSchema);
