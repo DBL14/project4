@@ -36,7 +36,7 @@ function momentsShow(req, res){
     res.status(200).send(moment);
   });
 }
-
+//ensure mongoose displays the latest version after updating
 function momentsUpdate(req, res){
   var id = req.params.id;
 
