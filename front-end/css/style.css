@@ -1,8 +1,16 @@
 
+body, h1, p{
+	text-align: center;
+}
+
+li{
+	list-style-type: none;
+}
 
 nav{
 	background-color: #28AADC;
 	padding: 20px;
+
 }
 
 a{
@@ -18,9 +26,22 @@ a:hover{
 
 }
 
+.delete:hover{
+	background-color: red;
+}
+
 #map{
 	height: 300px;
 	width: 300px;
+}
+
+button{
+	background-color: #70E1F5;
+	border-color: #254E70;
+	margin: 10px;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
 }
 
 input[type=radio] {
@@ -30,15 +51,42 @@ input[type=radio] {
 input[type="radio"] + label {
 	display: inline-block;
 	border: 0;
-	height: 50px;
-	width: 50px;
-	color: blue;
-	background-color: blue;
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+
+	color: #70E1F5;
+	background-color: #70E1F5;
 	border-radius: 50%;
 }
 
-.radiolabel{
+input[type="radio"]:checked + label{
+	
+	color: #ffD194;
+	background-color: #ffD194;
+
+}
+
+input[type="radio"] + label:hover{
+	
+	color: yellow;
+	background-color: yellow;
+
+}
+
+/*.radiolabel{
 	
 	border: ;
 	border-color: red;
+}*/
+
+span{
+	display: inline-block;
+	width: 6em;
+	height: 6em;
+}
+
+textarea{
+	height: 300px;
+	width: 300px;
 }
