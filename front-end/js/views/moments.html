@@ -8,6 +8,15 @@
       <div>{{ moment.longitude }}</div>
       <div>{{ moment.latitude }}</div>
 
+<static-gmap
+    size="640x200"
+    sensor="false"
+    zoom="14"
+    markers="{ color: 'red', label: 'X', coords: [moment.longitude, moment.latitude] }">
+</static-gmap>
+
+
+
 
 	      <textarea class="form-control" id="details" name="details" ng-model="moment.description"></textarea>
 
