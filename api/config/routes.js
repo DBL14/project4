@@ -26,7 +26,7 @@ router.route('/moments')
 
 router.route('/moments/:id') 
   .get(momentsController.momentsShow)
-  .patch(momentsController.momentsUpdate)
+  .put(momentsController.momentsUpdate)
   .delete(momentsController.momentsDelete)
 
 module.exports = router;

@@ -40,7 +40,7 @@ function momentsShow(req, res){
 function momentsUpdate(req, res){
   var id = req.params.id;
 
-  Moment.findByIdAndUpdate({ _id: id }, req.body.moment, function(err, moment){
+  Moment.findByIdAndUpdate({ _id: id }, req.body, {new:true}, function(err, moment){
     if (err) return res.status(500).send(err);
     if (!moment) return res.status(404).send(err);
     res.status(200).send(moment);

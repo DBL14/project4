@@ -47,6 +47,31 @@ function MomentsController($scope, Moment, User, $state, CurrentUser){
     });
   };
 
+  self.delete = function(moment){
+    console.log('deleting');
+    moment.$delete();
+    var index = self.all.indexOf(moment);
+    self.all.splice(index, 1);
+  }
+
+  self.update = function(moment){
+    moment.$update(function(){
+      console.log('saved');
+    }
+    );
+  }
+
+
+//   self.edit = function(){
+  
+//   self.edit({ _id: req.params.id }, {'self.description': req.body.description}, {new: true}, function(err, moment){
+//     if (err) return res.status(500).send(err);
+//     if (!moment) return res.status(404).send(err);
+
+//     res.status(200).send(moment);
+//   });  
+// }
+
   function getLocation() {
   // console.log('getting location');
     if (navigator.geolocation) {
@@ -91,4 +116,5 @@ function MomentsController($scope, Moment, User, $state, CurrentUser){
   self.getMoments();
   self.getUsers();
   getLocation();
+
 }

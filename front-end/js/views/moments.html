@@ -5,8 +5,16 @@
     <div>
       <h4>{{ moment.emotion }}</h4>
       <p>{{ moment.description }}</p>
-              <button class='delete' ng-click="moments.deleteMoment(moment)">Delete</button>
+      <div>{{ moment.longitude }}</div>
+      <div>{{ moment.latitude }}</div>
 
+
+	      <textarea class="form-control" id="details" name="details" ng-model="moment.description"></textarea>
+
+	    <input type="button"  ng-click="moments.update(moment)" value="Change Description">
+	      
+
+	        <button class='delete' ng-click="moments.delete(moment)">Delete</button>
     </div>
   </li>
 </ul>
