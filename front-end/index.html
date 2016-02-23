@@ -16,13 +16,14 @@
   <script src="./js/models/moment.js"></script>
   <script src="./js/controllers/usersController.js"></script>
   <script src="./js/controllers/momentsController.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body ng-controller="UsersController as users">
 <nav>
      	  <a ui-sref-active='active' ui-sref="login" ng-hide="users.checkLoggedIn()">Login</a>
-      	<a ui-sref-active='active' ui-sref="register" ng-hide="users.checkLoggedIn()">Register</a>
+      	<a ui-sref-active='active' ui-sref="register" ng-hide="users.checkLoggedIn()">Sign Up</a>
 
         <a ng-show="users.checkLoggedIn()" ui-sref="users">Users</a>
 

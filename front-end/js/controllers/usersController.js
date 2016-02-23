@@ -16,8 +16,8 @@ function UsersController(User, TokenService, $state, CurrentUser){
   self.login         = login;
   self.logout        = logout;
   self.checkLoggedIn = checkLoggedIn;
-  self.deleteUser    = deleteUser;
-  self.userUpdate    = userUpdate;
+  // self.deleteUser    = deleteUser;
+  // self.userUpdate    = userUpdate;
 
 
   // function deleteUser(user){

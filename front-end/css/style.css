@@ -14,10 +14,31 @@ a{
 
 a:hover{
 	color: white;
-	
+	text-decoration: none;
+
 }
 
 #map{
 	height: 300px;
 	width: 300px;
+}
+
+input[type=radio] {
+   display:none;
+}
+
+input[type="radio"] + label {
+	display: inline-block;
+	border: 0;
+	height: 50px;
+	width: 50px;
+	color: blue;
+	background-color: blue;
+	border-radius: 50%;
+}
+
+.radiolabel{
+	
+	border: ;
+	border-color: red;
 }
