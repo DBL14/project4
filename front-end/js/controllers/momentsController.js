@@ -31,7 +31,7 @@ function MomentsController($scope, Moment, User, $state, CurrentUser){
        self.users = data;
     });
   };
-
+//define latitude and longitude
   self.add = function(){
     self.moment.user = self.currentUser._id;
     self.moment.latitude = lat;

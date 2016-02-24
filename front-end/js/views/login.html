@@ -1,8 +1,9 @@
 <section ng-hide="users.checkLoggedIn()">
 <br>
+<br>
   <br>
   <br>
-  <h2>Login</h2>
+  <h1>Login</h1>
   <form id="login" name="users.loginForm" ng-submit="users.login()" novalidate>
     <div class="alert alert-danger" role="alert" ng-show="(!!users.error && users.loginForm.$submitted)">{{ users.error }}</div>
 
