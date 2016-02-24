@@ -39,7 +39,7 @@ function UsersController(User, TokenService, $state, CurrentUser){
 
   function getUsers() {
     User.query(function(data){
-      // console.log(data)
+      console.log(data)
       self.all = data;
     });
   }

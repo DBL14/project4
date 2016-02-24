@@ -5,8 +5,18 @@
       </a>
     </div>
     <div class="media-body">
+    <div ng-repeat="moment in user.moments">
       <h4 class="media-heading">{{ user.local.username }}</h4>
-      <p>{{ user.local.moments }}</p>
+      <p>{{ moment.emotion }}</p>
+      <p>{{ moment.description }}</p>
+      <p>{{ moment.latitude }}</p>
+      <static-gmap
+          size="640x200"
+          sensor="false"
+          zoom="14"
+          markers="{ coords: [moment.latitude, moment.longitude ] }">
+      </static-gmap>
+    </div>
     </div>
   </li>
 </ul>

@@ -1,5 +1,5 @@
 angular
-  .module('emotions', ['ngResource', 'angular-jwt', 'ui.router'])
+  .module('emotions', ['ngResource', 'angular-jwt', 'ui.router', 'wu.staticGmap'])
   .constant('API', 'http://localhost:3000/api')
   .config(MainRouter)
   .config(function($httpProvider){
