@@ -7,21 +7,7 @@ function usersIndex(req, res) {
   });
 }
 
-// function usersIndex(req, res){
-//   User.find().populate("projects").exec(function(err, users) {
-//     if (err) return res.status(404).send(err);
-//     res.status(200).send(users);
-//   });
-// }
 
-// function usersShow(req, res){
-//   var id = req.params.id;
-//   User.findById({ _id: id }).populate("projects").exec(function(err, user) {
-//     if (err) return res.status(500).send(err);
-//     if (!user) return res.status(404).send(err);
-//     res.status(200).send(user);
-//   });
-// }
 
 function usersShow(req, res){
   User.findById(req.params.id, function(err, user){
