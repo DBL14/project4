@@ -4,7 +4,7 @@
 <h1>Moments</h1>
 
 <ul>
-  <li ng-repeat="moment in moments.all">
+  <li ng-repeat="moment in moments.all | reverse">
     <div>
       <h4>{{ moment.emotion }}</h4>
       <p>{{ moment.description }}</p>
@@ -21,7 +21,7 @@
 
 
 
-	      <textarea class="form-control" id="details" name="details" ng-model="moment.description"></textarea>
+	     <textarea class="form-control" id="details" name="details" ng-model="moment.description"></textarea>
 
 	    <button  ng-click="moments.update(moment)">Change Description</button>
 	      
