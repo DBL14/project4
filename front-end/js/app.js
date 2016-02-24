@@ -4,7 +4,11 @@ angular
   .config(MainRouter)
   .config(function($httpProvider){
     $httpProvider.interceptors.push('authInterceptor');
-  });
+  }).filter('reverse', function() {
+  return function(items) {
+    return items.slice().reverse();
+  };
+});;
 
   MainRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
 
