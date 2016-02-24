@@ -69,10 +69,20 @@ a:hover{
 button{
 	background-color: #70E1F5;
 	border-color: #254E70;
+	border-width: 1px;
 	margin: 10px;
 	border-radius: 50%;
 	height: 100px;
 	width: 100px;
+	position: relative;
+	box-shadow: 0px 5px 0px black;
+
+}
+
+button:active{
+	position: relative;
+	top: 7px;
+	box-shadow: 0px 2px 0px black;
 }
 
 input[type=radio] {
