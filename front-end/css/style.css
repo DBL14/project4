@@ -8,14 +8,8 @@ html{
 }
 
 #title{
-	/*vertical-align: middle;*/
 
 	font-family: 'Lobster', cursive;
-	/*position: absolute;
-	top: 20px;*/
-
-
-
 }
 
 #triangle1{
@@ -23,7 +17,6 @@ html{
 	height: 0;
 	border-top: 200px solid white;
 	border-right: 200px solid transparent;
-/*	position: absolute;*/
 
 }
 
@@ -66,6 +59,9 @@ h1{
 p, label{
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
+	color: white;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.5);
+
 }
 
 body{
@@ -116,6 +112,7 @@ a:visited{
 
 .delete:hover{
 	background-color: #FF1654;
+
 }
 
 #map{
@@ -124,13 +121,6 @@ a:visited{
 	border: 2px solid #ddd;
   border-radius: 3px;
 }
-
-/*#details{
-	width: 300px;
-	text-align: center;
-}*/
-
-/*input[type="text"]*/
 
 button{
 	background-color: #70E1F5;

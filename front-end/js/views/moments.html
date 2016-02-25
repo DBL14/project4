@@ -1,7 +1,7 @@
 <br>
 <br>
-  <br>
-  <br>
+<br>
+<br>
 <h1>Moments</h1>
 
 <ul>
@@ -11,22 +11,21 @@
       <p>{{ moment.description }}</p>
     
 
-<static-gmap
-    size="300x300"
-    sensor="false"
-    zoom="14"
-    markers="{ coords: [moment.latitude, moment.longitude ] }">
-</static-gmap>
+        <static-gmap
+            size="300x300"
+            sensor="false"
+            zoom="14"
+            markers="{ coords: [moment.latitude, moment.longitude ] }">
+        </static-gmap>
 
-<br>
-<br>
-
+        <br>
+        <br>
 
 	     <textarea class="form-control" id="details" name="details" ng-model="moment.description"></textarea>
 
-	    <button  ng-click="moments.update(moment)">Change Description</button>
+	     <button ng-click="moments.update(moment)">Change Description</button>
 	      
-      <br>
+        <br>
 	        <button class='delete' ng-click="moments.delete(moment)">Delete</button>
     </div>
   </li>

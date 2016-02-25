@@ -12,15 +12,12 @@
 
     <div class="form-group">
             
-           
-            
             <span><input type="radio" id="radio1" class="radio" ng-model="moments.moment.emotion" value="happy">happy
             <label for="radio1"></label></span>
             
             <span><input type="radio" id="radio2" class="radio" ng-model="moments.moment.emotion" value="sad">sad
             <label for="radio2"></label></span>
 
-            
             
             <span><input type="radio" id="radio3" class="radio" ng-model="moments.moment.emotion" value="angry">angry
             <label for="radio3"></label></span>
@@ -39,25 +36,17 @@
             <label for="radio6"></label></span>
 
             <br>
-       
-
     </div>
-      
-          
-
 
     <div class="form-group">
           <label for="description">Details</label>
           <textarea class="form-control" id="details" name="details" ng-model="moments.moment.description"></textarea>
     </div>
-
-   
-
     
-<img ng-src="{{moments.mapsrc}}" width="300" height="300"/>
-<br>
+    <img ng-src="{{moments.mapsrc}}" width="300" height="300"/>
+    <br>
     <button type="submit">Submit</button>
-  </form>
 
+  </form>
 </section>
 
