@@ -1,17 +1,66 @@
 @import url(https://fonts.googleapis.com/css?family=Lora);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 
 html{
 	height: 100%;
 
 }
 
+#title{
+	/*vertical-align: middle;*/
+
+	font-family: 'Lobster', cursive;
+	/*position: absolute;
+	top: 20px;*/
+
+
+
+}
+
+#triangle1{
+	width: 0;
+	height: 0;
+	border-top: 200px solid white;
+	border-right: 200px solid transparent;
+/*	position: absolute;*/
+
+}
+
+/*#triangle4{
+	width: 0;
+	height: 0;
+	border-top: 200px solid white;
+	border-left: 200px solid transparent;*/
+	/*position: absolute;
+	left: 75%;
+	bottom: 57%;
+}
+*/
+#triangle2{
+	width: 0;
+	height: 0;
+	border-bottom: 200px solid white;
+	border-left: 200px solid transparent;
+	float: right;
+	/*position: absolute;
+	left: 75%;
+	top: 50%;*/
+}
+
+/*#triangle3{
+	width: 0;
+	height: 0;
+	border-bottom: 200px solid white;
+	border-right: 200px solid transparent;
+}*/
+
 h1{
-	font-family: 'Lora', serif;
+	font-family: 'Lobster', cursive;
 	color: white;
 	font-style: bold;
 	font-size: 90px;
-	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.5);
 }
 
 p, label{
