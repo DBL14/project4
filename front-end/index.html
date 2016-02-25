@@ -24,7 +24,7 @@
 <body ng-controller="UsersController as users">
 <!--  BOOTSTRAP NAVIGATION -->
   <nav id="navStyle" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container"> <!-- links display depending on whether or not the user is logged in -->
       <!-- Brand and toggle get grouped for better mobile display -->
 
    <a ui-sref-active='active' ui-sref="login" ng-hide="users.checkLoggedIn()">Login</a>

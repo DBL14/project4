@@ -16,7 +16,7 @@ function MomentsController($scope, Moment, User, $state, CurrentUser){
   
   self.getMoments = function(){
     Moment.query(function(data){
-      // .filter is an inbuilt Javascript method that allows you to filter an array and make a new array from any of the elements in the original array that pass your filter. We do this to only show moments for the current user
+      // filter an array and make a new array from any of the elements in the original array. Show moments for the current user
       var newArray = data.filter(function(moment) {
         if (moment.user && moment.user._id == self.currentUser._id) {
           return true;
@@ -61,16 +61,6 @@ function MomentsController($scope, Moment, User, $state, CurrentUser){
     );
   }
 
-
-//   self.edit = function(){
-  
-//   self.edit({ _id: req.params.id }, {'self.description': req.body.description}, {new: true}, function(err, moment){
-//     if (err) return res.status(500).send(err);
-//     if (!moment) return res.status(404).send(err);
-
-//     res.status(200).send(moment);
-//   });  
-// }
 
   function getLocation() {
   // console.log('getting location');

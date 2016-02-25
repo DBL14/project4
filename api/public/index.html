@@ -26,11 +26,10 @@
   <nav id="navStyle" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-
-   <a ui-sref-active='active' ui-sref="login" ng-hide="users.checkLoggedIn()">Login</a>
+<!--       links are shown if user is logged in. log in and sign up are hidden if user is logged in
+ -->   <a ui-sref-active='active' ui-sref="login" ng-hide="users.checkLoggedIn()">Login</a>
         <a ui-sref-active='active' ui-sref="register" ng-hide="users.checkLoggedIn()">Sign Up</a>
         <a id="title" ng-show="users.checkLoggedIn()" ui-sref="#">Mind Snap</a>
-
         <a ng-show="users.checkLoggedIn()" ui-sref="users">Users</a>
         <a ng-show="users.checkLoggedIn()" ui-sref="moments">Moments</a>
         <a ng-show="users.checkLoggedIn()" ui-sref="recordmoment">Record Moment</a>

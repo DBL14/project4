@@ -9,9 +9,9 @@
   <h1>How are you?</h1>
 <br>
   <form id="record-moment" ng-submit="moments.add()" novalidate>
-
+<!--             design radio buttons using labels. radio buttons add the emotion to the moment
+ -->
     <div class="form-group">
-            
             <span><input type="radio" id="radio1" class="radio" ng-model="moments.moment.emotion" value="happy">happy
             <label for="radio1"></label></span>
             
@@ -36,13 +36,13 @@
             <label for="radio6"></label></span>
 
             <br>
-    </div>
+    </div>  <!-- user can provide details using the text area -->
 
     <div class="form-group">
           <label for="description">Details</label>
           <textarea class="form-control" id="details" name="details" ng-model="moments.moment.description"></textarea>
-    </div>
-    
+    </div> <!-- use geolocation to get longitude and latitude of user's location and present location with google static map -->
+        
     <img ng-src="{{moments.mapsrc}}" width="300" height="300"/>
     <br>
     <button type="submit">Submit</button>

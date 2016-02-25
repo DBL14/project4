@@ -27,7 +27,7 @@ function TokenService($window, jwtHelper) {
     return $window.localStorage.removeItem('auth-token');
   }
 
-  // Unhash token, which contains the user object. Works in concert with the currentUser service. We can now access the currentUser in our controllers
+  // Unhash token, which contains the user object. Works in concert with the currentUser service. Access the currentUser in controllers
   function decodeToken() {
     var token = self.getToken();
     return token ? jwtHelper.decodeToken(token) : null;

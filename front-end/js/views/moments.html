@@ -4,14 +4,14 @@
 <br>
 <h1>Moments</h1>
 
-<ul>
+<ul> <!-- reverse the list of moments so the latest is at the top of the list -->
   <li ng-repeat="moment in moments.all | reverse">
     <div>
       <h4>{{ moment.emotion }}</h4>
       <p>{{ moment.description }}</p>
     
-
-        <static-gmap
+<!--                   insert each saved moment's longitude and latitude to be presented with google map
+ -->        <static-gmap
             size="300x300"
             sensor="false"
             zoom="14"
@@ -20,8 +20,8 @@
 
         <br>
         <br>
-
-	     <textarea class="form-control" id="details" name="details" ng-model="moment.description"></textarea>
+<!--                             allow the user to change details
+ -->	 <textarea class="form-control" id="details" name="details" ng-model="moment.description"></textarea>
 
 	     <button ng-click="moments.update(moment)">Change Description</button>
 	      

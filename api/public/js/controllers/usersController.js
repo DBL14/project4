@@ -2,7 +2,7 @@ angular
   .module('emotions')
   .controller('UsersController', UsersController);
 
-// Here we inject the currentUser service to access the current user
+// inject the currentUser service to access the current user
 UsersController.$inject = ['User', 'TokenService', '$state', 'CurrentUser'];
 function UsersController(User, TokenService, $state, CurrentUser){
 
@@ -16,26 +16,8 @@ function UsersController(User, TokenService, $state, CurrentUser){
   self.login         = login;
   self.logout        = logout;
   self.checkLoggedIn = checkLoggedIn;
-  // self.deleteUser    = deleteUser;
-  // self.userUpdate    = userUpdate;
 
 
-  // function deleteUser(user){
-  //   User.delete({id: user._id});
-  //   var index = self.users.indexOf(user);
-  //   self.users.splice(index, 1);
-  // }
-
-//   function userUpdate(req, res){
-
-//   console.log(req.body.email);
-//   User.findByIdAndUpdate({ _id: req.params.id }, {'local.email': req.body.email}, {new: true}, function(err, user){
-//     if (err) return res.status(500).send(err);
-//     if (!user) return res.status(404).send(err);
-
-//     res.status(200).send(user);
-//   });  
-// }
 
   function getUsers() {
     User.query(function(data){

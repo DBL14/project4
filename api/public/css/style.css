@@ -7,11 +7,12 @@ html{
 
 }
 
+/*title in navbar*/
 #title{
 
 	font-family: 'Lobster', cursive;
 }
-
+/*triangles on homepage*/
 #triangle1{
 	width: 0;
 	height: 0;
@@ -20,33 +21,16 @@ html{
 
 }
 
-/*#triangle4{
-	width: 0;
-	height: 0;
-	border-top: 200px solid white;
-	border-left: 200px solid transparent;*/
-	/*position: absolute;
-	left: 75%;
-	bottom: 57%;
-}
-*/
+
 #triangle2{
 	width: 0;
 	height: 0;
 	border-bottom: 200px solid white;
 	border-left: 200px solid transparent;
 	float: right;
-	/*position: absolute;
-	left: 75%;
-	top: 50%;*/
+	
 }
 
-/*#triangle3{
-	width: 0;
-	height: 0;
-	border-bottom: 200px solid white;
-	border-right: 200px solid transparent;
-}*/
 
 h1{
 	font-family: 'Lobster', cursive;
@@ -82,14 +66,14 @@ body{
 li{
 	list-style-type: none;
 }
-/*#28AADC*/
+
 #navStyle{
 	background-color: #556270;
 	padding: 20px;
 	border: none;
 
 }
-/*color: #104E8B;*/
+
 a{
 	color: white;
 	margin: 20px;
@@ -141,6 +125,8 @@ button:active{
 	box-shadow: 0px 2px 0px black;
 }
 
+/*hide the radio buttons and style the labels to replace the radio buttons
+*/
 input[type=radio] {
    display:none;
 }
@@ -153,7 +139,6 @@ input[type="radio"] + label {
 	margin: 10px;
 	margin-right: 0;
 
-	/*color: #70E1F5;*/
 	background-color: #bced91;
 	border-radius: 50%;
 	position: relative;
@@ -162,7 +147,6 @@ input[type="radio"] + label {
 
 input[type="radio"]:checked + label{
 	
-	/*color: #ffD194;*/
 	background-color: #ff9955;
 	position: relative;
 	top: 7px;
@@ -177,13 +161,6 @@ input[type="radio"] + label:hover{
 
 }
 
-
-
-/*.radiolabel{
-	
-	border: ;
-	border-color: red;
-}*/
 
 span{
 	display: inline-block;
