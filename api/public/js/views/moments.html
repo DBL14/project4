@@ -1,0 +1,33 @@
+<br>
+<br>
+<br>
+<br>
+<h1>Moments</h1>
+
+<ul>
+  <li ng-repeat="moment in moments.all | reverse">
+    <div>
+      <h4>{{ moment.emotion }}</h4>
+      <p>{{ moment.description }}</p>
+    
+
+        <static-gmap
+            size="300x300"
+            sensor="false"
+            zoom="14"
+            markers="{ coords: [moment.latitude, moment.longitude ] }">
+        </static-gmap>
+
+        <br>
+        <br>
+
+	     <textarea class="form-control" id="details" name="details" ng-model="moment.description"></textarea>
+
+	     <button ng-click="moments.update(moment)">Change Description</button>
+	      
+        <br>
+	        <button class='delete' ng-click="moments.delete(moment)">Delete</button>
+    </div>
+  </li>
+</ul>
+

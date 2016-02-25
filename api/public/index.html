@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="emotions">
+<head>
+	<title>Project 4</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-messages.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="/bower_components/angular-google-staticmaps/angular-google-staticmaps.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/services/tokenService.js"></script>
+  <script src="./js/services/authInterceptor.js"></script>
+  <script src="./js/services/currentUser.js"></script>
+  <script src="./js/models/user.js"></script>
+  <script src="./js/models/moment.js"></script>
+  <script src="./js/controllers/usersController.js"></script>
+  <script src="./js/controllers/momentsController.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body ng-controller="UsersController as users">
+<!--  BOOTSTRAP NAVIGATION -->
+  <nav id="navStyle" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+
+   <a ui-sref-active='active' ui-sref="login" ng-hide="users.checkLoggedIn()">Login</a>
+        <a ui-sref-active='active' ui-sref="register" ng-hide="users.checkLoggedIn()">Sign Up</a>
+        <a id="title" ng-show="users.checkLoggedIn()" ui-sref="#">Mind Snap</a>
+
+        <a ng-show="users.checkLoggedIn()" ui-sref="users">Users</a>
+        <a ng-show="users.checkLoggedIn()" ui-sref="moments">Moments</a>
+        <a ng-show="users.checkLoggedIn()" ui-sref="recordmoment">Record Moment</a>
+        <a ng-show="users.checkLoggedIn()" ui-sref="profile">Profile</a>
+        <a ng-show="users.checkLoggedIn()" ui-sref="home" ng-click="users.logout()">Logout</a>
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <main class="container" ui-view></main>
+
+
+</body>
+</html>

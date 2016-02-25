@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+<br>
+<h1>Users</h1>
+<ul class="media-list">
+  <li class="media" ng-repeat="user in users.all | reverse">
+    <div class="media-left">
+      <a href="#" ui-sref="profile">
+      </a>
+    </div>
+    <div class="media-body">
+    <div ng-repeat="moment in user.moments | reverse">
+      <h4 class="media-heading">{{ user.local.username }}</h4>
+      <p>{{ moment.emotion }}</p>
+      <p>{{ moment.description }}</p>
+      
+      <static-gmap
+          size="300x300"
+          sensor="false"
+          zoom="14"
+          markers="{ coords: [moment.latitude, moment.longitude ] }">
+      </static-gmap>
+    </div>
+    </div>
+  </li>
+</ul>

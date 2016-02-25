@@ -1,0 +1,52 @@
+
+
+<section ng-show="users.checkLoggedIn()">
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h1>How are you?</h1>
+<br>
+  <form id="record-moment" ng-submit="moments.add()" novalidate>
+
+    <div class="form-group">
+            
+            <span><input type="radio" id="radio1" class="radio" ng-model="moments.moment.emotion" value="happy">happy
+            <label for="radio1"></label></span>
+            
+            <span><input type="radio" id="radio2" class="radio" ng-model="moments.moment.emotion" value="sad">sad
+            <label for="radio2"></label></span>
+
+            
+            <span><input type="radio" id="radio3" class="radio" ng-model="moments.moment.emotion" value="angry">angry
+            <label for="radio3"></label></span>
+
+            <br>
+            
+            <span><input type="radio" id="radio4" class="radio" ng-model="moments.moment.emotion" value="scared">scared
+            <label for="radio4"></label></span>
+
+            
+            <span><input type="radio" id="radio5" class="radio" ng-model="moments.moment.emotion" value="disgusted">disgusted
+            <label for="radio5"></label></span>
+
+            
+            <span><input type="radio" id="radio6" class="radio" ng-model="moments.moment.emotion" value="surprised">surprised
+            <label for="radio6"></label></span>
+
+            <br>
+    </div>
+
+    <div class="form-group">
+          <label for="description">Details</label>
+          <textarea class="form-control" id="details" name="details" ng-model="moments.moment.description"></textarea>
+    </div>
+    
+    <img ng-src="{{moments.mapsrc}}" width="300" height="300"/>
+    <br>
+    <button type="submit">Submit</button>
+
+  </form>
+</section>
+
