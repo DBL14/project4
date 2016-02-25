@@ -9,7 +9,7 @@ function register(req, res, next) {
     if (info) return res.status(401).json({ message: info.message });
     if (!user) return res.status(401).json({ message: 'User already exists!' });
 
-    // User has authenticated so issue token
+    // User has authenticated - issue token
     var token = jwt.sign(user.toJSON(), secret, { expiresIn: 60*60*24 });
 
     // Send back the token to the front-end to store

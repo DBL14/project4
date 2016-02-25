@@ -63,10 +63,8 @@ function MomentsController($scope, Moment, User, $state, CurrentUser){
 
 
   function getLocation() {
-  // console.log('getting location');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-        // var location = navigator.geolocation.getCurrentPosition();
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
@@ -94,7 +92,7 @@ function MomentsController($scope, Moment, User, $state, CurrentUser){
     lng = position.coords.longitude;
 
     latlon = lat + "," + lng;
-    // console.log(latlon)
+    
     var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300";
     console.log(img_url);
 
