@@ -1,0 +1,18 @@
+{
+  "name": "api",
+  "description": "",
+  "main": "app.js",
+  "license": "ISC",
+  "homepage": "https://github.com/DBL14/project4",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-google-staticmaps": "^0.3.0"
+  }
+}
