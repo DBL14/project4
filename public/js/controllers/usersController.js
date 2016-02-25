@@ -17,8 +17,6 @@ function UsersController(User, TokenService, $state, CurrentUser){
   self.logout        = logout;
   self.checkLoggedIn = checkLoggedIn;
 
-
-
   function getUsers() {
     User.query(function(data){
       console.log(data)
@@ -29,7 +27,7 @@ function UsersController(User, TokenService, $state, CurrentUser){
   function handleLogin(res) {
     var token = res.token ? res.token : null;
     if (token) {
-      self.getUsers();
+      // self.getUsers();
       $state.go('home');
     }
     self.user = TokenService.decodeToken();
@@ -67,5 +65,6 @@ function UsersController(User, TokenService, $state, CurrentUser){
     self.getUsers();
   }
 
-  return self;
+  // getUsers();
+  // return self;
 }

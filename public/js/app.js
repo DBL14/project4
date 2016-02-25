@@ -32,7 +32,8 @@ angular
       })
       .state('users', {
         url: "/users",
-        templateUrl: "./js/views/users.html"
+        templateUrl: "./js/views/users.html",
+        controller: "UsersController as users"
       })
       .state('moments', {
         url: "/moments",
