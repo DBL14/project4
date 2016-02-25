@@ -1,6 +1,6 @@
 angular
   .module('emotions', ['ngResource', 'angular-jwt', 'ui.router', 'wu.staticGmap'])
-  .constant('API', 'http://localhost:3000/api')
+  .constant('API', '/api')
   .config(MainRouter)
   .config(function($httpProvider){
     $httpProvider.interceptors.push('authInterceptor');
